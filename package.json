@@ -5,11 +5,15 @@
     "ts-node": "^10.9.2",
     "typescript": "^5.6.2"
   },
-  "scripts": {
-    "start": "node dist/index.js",
-    "build": "tsc",
-    "dev": "nodemon --watch src --ext ts --verbose --exec ts-node src/index.ts"
-  },
+"homepage": "https://Kyushokugorira.github.io/react-todo-app",
+"scripts": {
+  "dev": "vite",
+  "build": "tsc -b && vite build",
+  "lint": "eslint .",
+  "preview": "vite preview",
+  "predeploy": "npm run build",
+  "deploy": "gh-pages -d dist"
+},
   "dependencies": {
     "dayjs": "^1.11.13",
     "uuid": "^10.0.0"
